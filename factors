@@ -10,6 +10,8 @@ with open(argv[1], 'r') as file:
     while line := file.readline():
         is_prime = False
         prime = 2
+        if len(line) > 18:
+            continue
         num = int(line)
         if num % prime == 0:
             print(f'{num}={num // prime}*{prime}')
@@ -30,11 +32,12 @@ with open(argv[1], 'r') as file:
 # > 15 => 34G
 # > 17 => 34G
 # > 20 => 29G
-# isqrt => 29G
-# isqrt and > 15 => 32G
-# isqrt and > 16 => 28G
-# isqrt and > 17 => 32G
-# isqrt and > 18 => 35G
-# isqrt and > 19 => 25G
-# isqrt and > 20 => 18G
-# isqrt and > 25 => 28G
+# isqrt and < 15 => 32G
+# isqrt and < 16 => 28G
+# isqrt and < 17 => 32G
+# isqrt and < 18 => 35G
+# isqrt and < 19 => 25G
+# isqrt and < 20 => 18G
+# isqrt and < 25 => 28G
+# isqrt and prime+2 => 40G
+# isqrt and prime+2 and < 18 => 40G

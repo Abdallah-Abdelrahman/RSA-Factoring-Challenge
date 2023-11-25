@@ -11,10 +11,13 @@ if len(argv) != 2:
 with open(argv[1], 'r') as file:
     while line := file.readline():
         prime = 2
+        if (len(line) > 17):
+            continue
         num = int(line)
         while num % prime != 0:
             prime += 1
         print(f'{num}={num // prime}*{prime}')
-# no condition => 30G
+# no condition => 31G
 # > 15 => 34G
+# > 17 => 
 # > 20 => 29G

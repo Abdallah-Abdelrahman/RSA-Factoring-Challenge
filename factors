@@ -8,11 +8,14 @@ from math import isqrt
 
 with open(argv[1], 'r') as file:
     while line := file.readline():
-        if (len(line) > 16):
-            continue
         is_prime = False
         prime = 2
         num = int(line)
+        if num % prime == 0:
+            print(f'{num}={num // prime}*{prime}')
+            continue
+        prime += 1
+
         while prime <= isqrt(num):
             if (num % prime == 0):
                 is_prime = False
@@ -28,7 +31,7 @@ with open(argv[1], 'r') as file:
 # > 20 => 29G
 # isqrt => 29G
 # isqrt and > 15 => 32G
-# isqrt and > 16 => 
+# isqrt and > 16 => 28G
 # isqrt and > 17 => 32G
 # isqrt and > 18 => 35G
 # isqrt and > 19 => 25G

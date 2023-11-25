@@ -15,8 +15,9 @@ with open(argv[1], 'r') as file:
             print(f'{num}={num // prime}*{prime}')
             continue
         prime += 1
+        sqrt = isqrt(num)
 
-        while prime <= isqrt(num):
+        while prime <= sqrt:
             if (num % prime == 0):
                 is_prime = False
                 print(f'{num}={num // prime}*{prime}')

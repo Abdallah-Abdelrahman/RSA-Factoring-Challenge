@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+"""This module represents the RSA challenge."""
+
+
+from sys import argv
+
+
+if len(argv) != 2:
+    exit(1)
+file = open(argv[1], 'r')
+
+for line in file.readlines():
+    num = int(line)
+    prime = 2
+    while num % prime != 0:
+        prime +=1
+    print(f'{num}={num // prime}*{prime}')
+    
+file.close()

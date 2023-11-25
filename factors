@@ -10,7 +10,7 @@ with open(argv[1], 'r') as file:
     while line := file.readline():
         is_prime = False
         prime = 2
-        if len(line) > 20:
+        if len(line) > 19:
             continue
         num = int(line)
         if num % prime == 0:
@@ -41,4 +41,5 @@ with open(argv[1], 'r') as file:
 # isqrt and < 25 => 28G
 # isqrt and prime+2 => 40G
 # isqrt and prime+2 and < 18 => 44G
-# isqrt and prime+2 and < 20 => 
+# isqrt and prime+2 and < 19 => 
+# isqrt and prime+2 and < 20 => 42G

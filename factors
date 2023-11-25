@@ -8,7 +8,7 @@ from math import isqrt
 
 with open(argv[1], 'r') as file:
     while line := file.readline():
-        if (len(line) > 20):
+        if (len(line) > 19):
             continue
         is_prime = False
         prime = 2
@@ -31,4 +31,5 @@ with open(argv[1], 'r') as file:
 # isqrt and > 25 => 28G
 # isqrt and > 17 => 32G
 # isqrt and > 18 => 35G
-# isqrt and > 20 => 
+# isqrt and > 20 => 18G
+# isqrt and > 19 => 

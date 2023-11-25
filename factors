@@ -6,9 +6,6 @@ from sys import argv
 from math import isqrt
 
 
-if len(argv) != 2:
-    exit(1)
-
 with open(argv[1], 'r') as file:
     while line := file.readline():
         if (len(line) > 25):
@@ -31,4 +28,4 @@ with open(argv[1], 'r') as file:
 # > 20 => 29G
 # isqrt => 29G
 # isqrt and > 15 => 32G
-# isqrt and > 25 => 
+# isqrt and > 25 => 28G

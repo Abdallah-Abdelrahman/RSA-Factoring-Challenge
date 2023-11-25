@@ -22,7 +22,7 @@ with open(argv[1], 'r') as file:
             prime += 1
             is_prime = True
         if is_prime:
-            print(f'{num}={num*1}')
+            print(f'{num}={num}*1')
 # no condition => 31G
 # > 15 => 34G
 # > 17 => 34G

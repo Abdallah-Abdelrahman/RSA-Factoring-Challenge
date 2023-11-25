@@ -11,7 +11,7 @@ if len(argv) != 2:
 with open(argv[1], 'r') as file:
     while line := file.readline():
         prime = 2
-        if (len(line) > 23):
+        if (len(line) > 15):
             continue
         num = int(line)
         while num % prime != 0:

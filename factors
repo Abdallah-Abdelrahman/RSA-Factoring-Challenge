@@ -11,6 +11,8 @@ if len(argv) != 2:
 
 with open(argv[1], 'r') as file:
     while line := file.readline():
+        if (len(line) > 15):
+            continue
         is_prime = False
         prime = 2
         num = int(line)
@@ -27,3 +29,4 @@ with open(argv[1], 'r') as file:
 # > 15 => 34G
 # > 17 => 34G
 # > 20 => 29G
+# isqrt => 29G

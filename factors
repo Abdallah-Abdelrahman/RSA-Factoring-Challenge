@@ -10,15 +10,18 @@ from utils import is_prime
 with open(argv[1], 'r') as file:
     while line := file.readline():
         num = int(line)
+        sqrt = isqrt(num)
+        prime = 3
 
+        if sqrt ** 2 == num:
+            print(f'{num}={sqrt}*{sqrt}')
+            continue
         if num % 2 == 0:
             print(f'{num}={num // 2}*{2}')
             continue
         if is_prime(num):
             print(f'{num}={num}*1')
             continue
-        prime = 3
-        sqrt = isqrt(num)
 
         while prime <= sqrt:
             if (num % prime == 0):

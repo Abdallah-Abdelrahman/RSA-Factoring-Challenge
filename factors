@@ -13,9 +13,6 @@ with open(argv[1], 'r') as file:
         sqrt = isqrt(num)
         prime = 3
 
-        if sqrt ** 2 == num:
-            print(f'{num}={sqrt}*{sqrt}')
-            continue
         if num % 2 == 0:
             print(f'{num}={num // 2}*{2}')
             continue

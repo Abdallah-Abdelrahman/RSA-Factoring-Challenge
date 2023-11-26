@@ -18,7 +18,7 @@ with open(argv[1], 'r') as file:
         if is_prime(num):
             print(f'{num}={num}*1')
             continue
-
+"""
         prime = 3
         sqrt = isqrt(num)
 
@@ -27,3 +27,4 @@ with open(argv[1], 'r') as file:
                 print(f'{num}={num // prime}*{prime}')
                 break
             prime += 2
+"""

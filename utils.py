@@ -18,4 +18,4 @@ def is_prime(num):
         return False
     if sum_digits(num) % 3 == 0:
         return False
-    return False
+    return True

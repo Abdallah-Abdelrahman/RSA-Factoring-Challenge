@@ -12,13 +12,13 @@ with open(argv[1], 'r') as file:
     while line := file.readline():
         num = int(line)
 
-        if num % 2 == 0:
-            print(f'{num}={num // 2}*{2}')
-            continue
         if is_prime(num):
             print(f'{num}={num}*1')
             continue
 """
+        if num % 2 == 0:
+            print(f'{num}={num // 2}*{2}')
+            continue
         prime = 3
         sqrt = isqrt(num)
 

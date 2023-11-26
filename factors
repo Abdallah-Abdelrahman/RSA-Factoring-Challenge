@@ -4,8 +4,30 @@
 
 from sys import argv
 from math import isqrt
+from utils import is_prime
 
 
+with open(argv[1], 'r') as file:
+    while line := file.readline():
+        num = int(line)
+
+        if num % 2 == 0:
+            print(f'{num}={num // 2}*{2}')
+            continue
+        if is_prime(num):
+            print(f'{num}={num}*1')
+            continue
+
+        prime = 3
+        sqrt = isqrt(num)
+
+        while prime <= sqrt:
+            if (num % prime == 0):
+                print(f'{num}={num // prime}*{prime}')
+                break
+            prime += 2
+
+"""
 with open(argv[1], 'r') as file:
     while line := file.readline():
         is_prime = False
@@ -27,6 +49,7 @@ with open(argv[1], 'r') as file:
             is_prime = True
         if is_prime:
             print(f'{num}={num}*1')
+"""
 # no condition => 31G
 # > 15 => 34G
 # > 17 => 34G

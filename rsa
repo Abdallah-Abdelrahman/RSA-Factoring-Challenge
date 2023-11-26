@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+"""This module represents the RSA challenge."""
+
+
+from sys import argv
+from math import isqrt
+from utils import is_prime
+
+
+with open(argv[1], 'r') as file:
+    while line := file.readline():
+        num = int(line)
+
+        if num % 2 == 0:
+            print(f'{num}={num // 2}*{2}')
+            continue
+        if is_prime(num):
+            print(f'{num}={num}*1')
+            continue
+
+        prime = 3
+        sqrt = isqrt(num)
+
+        while prime <= sqrt:
+            if (num % prime == 0):
+                print(f'{num}={num // prime}*{prime}')
+                break
+            prime += 2

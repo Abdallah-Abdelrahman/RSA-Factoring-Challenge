@@ -11,15 +11,12 @@ with open(argv[1], 'r') as file:
     while line := file.readline():
         num = int(line)
 
-        """
         if num % 2 == 0:
             print(f'{num}={num // 2}*{2}')
             continue
-        """
         if is_prime(num):
             print(f'{num}={num}*1')
             continue
-"""
         prime = 3
         sqrt = isqrt(num)
 
@@ -28,7 +25,6 @@ with open(argv[1], 'r') as file:
                 print(f'{num}={num // prime}*{prime}')
                 break
             prime += 2
-"""
 # no condition => 31G
 # > 15 => 34G
 # > 17 => 34G
